@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of the Generals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link href="./bootstrap-5.1.1-dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="./bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./main.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="main.js" type="module" defer></script>
+</head>
+
+<body>
+    <div class="main-container d-flex flex-nowrap">
+        <div id="prepBoard" class="prep-board">
+            peices
+        </div>
+        <div id="boardGame" class="grid-container"></div>
+        <div id="overlay" class="overlay">
+            <div id="mainMenuForm" class="main-menu ">
+                <div class="title"> Game of the Generals </div>
+                <div class="d-grid gap-4 col-6 mx-auto">
+                    <button id="newGame" class="btn btn-outline-primary d-flex flex-nowrap justify-content-center"
+                        type="button">New
+                        Game <span class="material-symbols-outlined ps-3">
+                            military_tech
+                        </span>
+                    </button>
+                    <button id="joinLobby" class="btn btn-outline-primary d-flex flex-nowrap justify-content-center"
+                        type="button">Join
+                        Lobby <span class="material-symbols-outlined ps-3">
+                            meeting_room
+                        </span></button>
+                    <button id="instruction" class="btn btn-outline-primary d-flex flex-nowrap justify-content-center"
+                        type="button">Instruction <span class="material-symbols-outlined ps-3">
+                            quiz
+                        </span></button>
+                </div>
+            </div>
+            <div id="newGameForm" class="main-menu d-none">
+                <div class="title"> Game of the Generals </div>
+                <div class="d-grid gap-4 col-6">
+                    <div class="form-floating">
+                        <input type="email" class="form-control border border-primary-subtle" id="lobbynameValue"
+                            placeholder="">
+                        <label for="lobbynameValue" class="fs-7 fw- text-primary">
+                            LOBBY NAME
+                        </label>
+                    </div>
+                    <div class="d-flex flex-nowrap">
+                        <div class="pe-2">
+                            <button id="goBack"
+                                class="btn btn-outline-primary d-flex flex-nowrap justify-content-center" type="button">
+                                Back <span class="material-symbols-outlined ps-3">
+                                    cancel </span>
+                            </button>
+                        </div>
+
+                        <button id="createLobby"
+                            class="btn btn-outline-primary d-flex flex-nowrap justify-content-center" type="button">
+                            Create <span class="material-symbols-outlined ps-3">
+                                meeting_room </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
