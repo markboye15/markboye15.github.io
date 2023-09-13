@@ -1,6 +1,6 @@
 import { createBoardGame, createPrepTiles } from './boardTiles.js'
 import { challenge, availableMove } from './tileDetails.js'
-import { readFormation } from './preparation.js'
+// import { readFormation, onPrepSelectPiece } from './preparation.js'
 
 const checkSession = async () => {
     const currentURL = window.location.href
@@ -36,6 +36,8 @@ $(window).ready(() => {
             $("#mainMenuForm").addClass("d-none")
             $("#newGameForm").removeClass("d-none")
         })
+
+
 
         // readFormation()
     })

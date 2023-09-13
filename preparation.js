@@ -52,6 +52,10 @@ export const readFormation = () => {
     return playerBoard
 }
 
+export const onPrepSelectPiece = (piece) => {
+    console.log(piece)
+}
+
 
 const battleDetails = {
     1: {

@@ -51,7 +51,9 @@ const getPieceValue = (tileID) => { // is populated
     return tileID
 }
 
-function playerTurn(currPlayer = 0, isprevTileClicked = false, prevTileClickedValue = 'A1') {
+// export function playerTurn(prep = true, currPlayer = 0, isprevTileClicked = false, prevTileClickedValue = 'A1') {
+export function playerTurn(loc, piece) {
+    console.log(loc, piece)
     // oonclick if is current player to turn then = true or false
     //      if not isprevTileClicked
     //          if is clicked tile is occupied then = [0, 0] //0 not occupied, 1 allied, 2 enemy
@@ -70,27 +72,4 @@ function playerTurn(currPlayer = 0, isprevTileClicked = false, prevTileClickedVa
     //              piece move to target tile then end turn change currPlayer 0 to 1 vice versa
     //          
     //      false - then end
-}
-
-const pieceDetails = {
-    1: {
-        "rank": '5*G',
-        "name": 'Five star general',
-        "power": 13,
-        "srcImg": ''
-    },
-    2: {
-        "rank": '4*G',
-        "name": 'four star general',
-        "power": 12,
-        "srcImg": ''
-    }
-}
-
-
-class gogPiece {
-    constructor(color, position, rank) {
-
-    }
-
 }
