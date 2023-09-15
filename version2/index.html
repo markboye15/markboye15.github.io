@@ -39,10 +39,124 @@
                     Lobby <span class="material-symbols-outlined ps-2 fs-5">
                         meeting_room
                     </span></button>
-                <button id="instruction" class="btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                <button id="instruction"
+                    class="btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
                     type="button">Instruction <span class="material-symbols-outlined ps-2 fs-5">
                         quiz
                     </span></button>
+            </div>
+        </div>
+        <div id="newGameForm"
+            class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
+            <div class="d-grid gap-4">
+                <div class="title text-center fs-2  pb-2"> Game of the Generals </div>
+                <div class="card-title text-left fw-bold p-0"> Create Lobby </div>
+                <input type="text" class="form-control text-dark rounded-0 border-dark" placeholder="Enter lobby name"
+                    aria-label="room-name">
+                <div class="row g-1 align-items-center">
+                    <div class="col-auto">
+                        <input type="password" id="roomPassword" class="form-control text-dark border-dark rounded-0"
+                            aria-describedby="passwordHelpInline" placeholder="Enter pass code">
+                    </div>
+                    <div class="col-auto">
+                        <span id="passwordHelpInline" class="form-text ps-2">
+                            leave if not needed
+                        </span>
+                    </div>
+
+                </div>
+                <div class="form-check form-switch m-0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Ranked mode</label>
+                </div>
+                <select class="form-select form-select-sm border-dark rounded-0" aria-label="Large select example">
+                    <option selected>Game duration &nbsp;&nbsp; (25 mins)</option>
+                    <option value="1">30:00 mins</option>
+                    <option value="2">20:00 mins</option>
+                    <option value="3">15:00 mins</option>
+                    <option value="4">8:00 mins (fast game)</option>
+                </select>
+                <select class="form-select form-select-sm mb-3 border-dark rounded-0" aria-label="Large select example">
+                    <option selected>Per turn duration (2:30 mins)</option>
+                    <option value="1">2:00 mins</option>
+                    <option value="2">1:30 mins</option>
+                    <option value="3">45 secs</option>
+                    <option value="4">25 secs (fast game)</option>
+                </select>
+
+
+                <div class="row g-1 align-items-center justify-content-between">
+                    <button id="newGameGoBack"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button"> <span class="material-symbols-outlined  pt-sm-1 fs-5">
+                            chevron_left
+                        </span> Go back
+                    </button>
+                    <button id="createLobby"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button">Create <span class="material-symbols-outlined ps-2 fs-5">
+                            contract_edit
+                        </span></button>
+                </div>
+
+            </div>
+        </div>
+        <div id="lobbyRoomListForm"
+            class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
+            <div class="d-grid gap-4">
+                <div class="title text-center fs-2  pb-2"> Game of the Generals </div>
+                <div class="card-title text-left fw-bold p-0"> Lobby List </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Room</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Duraton</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark rom1</td>
+                            <td>Normal</td>
+                            <td>25:00 mins</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">Join</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mark rom2</td>
+                            <td>Normal</td>
+                            <td>25:00 mins</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">Join</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Mark rom3</td>
+                            <td>Normal</td>
+                            <td>25:00 mins</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">Join</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row g-1 align-items-center justify-content-between">
+                    <button id="lobbyRoomListGoBack"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button"> <span class="material-symbols-outlined  pt-sm-1 fs-5">
+                            chevron_left
+                        </span> Go back
+                    </button>
+                </div>
             </div>
         </div>
     </div>
