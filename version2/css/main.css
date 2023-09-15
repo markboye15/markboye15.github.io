@@ -8,3 +8,8 @@
 .main-menu {
     height: 100vh;
 }
+
+.main-menu-content {
+    /* min-height: 50vh; */
+    margin-top: calc(100vh / -4.2);
+}

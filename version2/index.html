@@ -26,8 +26,8 @@
     <div class="container-fluid d-flex flex-wrap justify-content-center align-content-center">
         <div id="mainMenuForm"
             class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
-            <div class="d-grid gap-4">
-                <div class="title text-center fs-2  pb-4"> Game of the Generals </div>
+            <div class="d-grid gap-4 main-menu-content">
+                <div class="title text-center fs-2  pb-4 font-monospace"> Game of the Generals </div>
                 <button id="newGame" class="btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
                     type="button">New
                     Game <span class="material-symbols-outlined ps-2 pt-1 fs-5">
@@ -48,8 +48,8 @@
         </div>
         <div id="newGameForm"
             class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
-            <div class="d-grid gap-4">
-                <div class="title text-center fs-2  pb-2"> Game of the Generals </div>
+            <div class="d-grid gap-4 main-menu-content">
+                <div class="title text-center fs-2  pb-2 font-monospace"> Game of the Generals </div>
                 <div class="card-title text-left fw-bold p-0"> Create Lobby </div>
                 <input type="text" class="form-control text-dark rounded-0 border-dark" placeholder="Enter lobby name"
                     aria-label="room-name">
@@ -66,8 +66,8 @@
 
                 </div>
                 <div class="form-check form-switch m-0">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Ranked mode</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="changeRankMode">
+                    <label class="form-check-label" for="changeRankMode">Ranked mode</label>
                 </div>
                 <select class="form-select form-select-sm border-dark rounded-0" aria-label="Large select example">
                     <option selected>Game duration &nbsp;&nbsp; (25 mins)</option>
@@ -81,7 +81,7 @@
                     <option value="1">2:00 mins</option>
                     <option value="2">1:30 mins</option>
                     <option value="3">45 secs</option>
-                    <option value="4">25 secs (fast game)</option>
+                    <option value="4">30 secs (fast game)</option>
                 </select>
 
 
@@ -103,16 +103,17 @@
         </div>
         <div id="lobbyRoomListForm"
             class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
-            <div class="d-grid gap-4">
-                <div class="title text-center fs-2  pb-2"> Game of the Generals </div>
+            <div class="d-grid gap-4 main-menu-content">
+                <div class="title text-center fs-2  pb-2 font-monospace"> Game of the Generals </div>
                 <div class="card-title text-left fw-bold p-0"> Lobby List </div>
-                <table class="table">
+                <table class="table border border-1 border-dark">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Room</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Duraton</th>
+                            <th scope="col">ROOM</th>
+                            <th scope="col">TYPE</th>
+                            <th scope="col">DURATION</th>
+                            <th> &emsp; &emsp;</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -156,6 +157,136 @@
                             chevron_left
                         </span> Go back
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="creatorlobbyRoomForm"
+            class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
+            <div class="d-grid gap-4 main-menu-content">
+                <div class="title text-center fs-2  pb-2 font-monospace"> Game of the Generals </div>
+                <div class="card-title text-left fw-bold p-0"> Lobby Room : Markboye (Normal)</div>
+
+                <table class="table border border-1 border-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">PLAYERS</th>
+                            <th scope="col">STATUS</th>
+                            <th> &emsp; &emsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>markboye1</td>
+                            <td>host</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">kick</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>markboye2</td>
+                            <td>waiting</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">kick</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <select class="form-select form-select-sm border-dark rounded-0" aria-label="Large select example">
+                    <option selected>Game duration &nbsp;&nbsp; (25 mins)</option>
+                    <option value="1">30:00 mins</option>
+                    <option value="2">20:00 mins</option>
+                    <option value="3">15:00 mins</option>
+                    <option value="4">8:00 mins (fast game)</option>
+                </select>
+                <select class="form-select form-select-sm mb-3 border-dark rounded-0" aria-label="Large select example">
+                    <option selected>Per turn duration (2:30 mins)</option>
+                    <option value="1">2:00 mins</option>
+                    <option value="2">1:30 mins</option>
+                    <option value="3">45 secs</option>
+                    <option value="4">30 secs (fast game)</option>
+                </select>
+                <div class="row g-1 align-items-center">
+                    <div class="col-auto">
+                        <input type="password" id="changeRoomPassword"
+                            class="form-control text-dark border-dark rounded-0"
+                            aria-describedby="changepasswordHelpInline" placeholder="Enter pass code">
+                    </div>
+                    <div class="col-auto">
+                        <span id="changepasswordHelpInline" class="form-text ps-2">
+                            leave if not needed
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="row g-1 align-items-center justify-content-between">
+                    <button id="creatorLobbyRoomFormGoBack"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button"> <span class="material-symbols-outlined  pt-sm-1 fs-5">
+                            chevron_left
+                        </span> Go back
+                    </button>
+                    <button id="startGame"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button">Start <span class="material-symbols-outlined ps-2 fs-5">
+                            start
+                        </span></button>
+                </div>
+            </div>
+        </div>
+        <div id="joinlobbyRoomForm"
+            class="main-menu container-fluid d-flex flex-wrap justify-content-center align-content-center flex-column">
+            <div class="d-grid gap-4 main-menu-content">
+                <div class="title text-center fs-2  pb-2 font-monospace"> Game of the Generals </div>
+                <div class="card-title text-left fw-bold p-0"> Lobby Room : Markboye (Normal)</div>
+                <table class="table border border-1 border-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">PLAYERS</th>
+                            <th scope="col">STATUS</th>
+                            <th> &emsp; &emsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>markboye1</td>
+                            <td>host</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">kick</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>markboye2</td>
+                            <td>waiting</td>
+                            <td>
+                                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href="#">kick</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-title text-left p-0"> Game Duration : 25:00 mins</div>
+                <div class="card-title text-left p-0"> Per Turn Duration : 1:30 mins</div>
+
+
+
+                <div class="row g-1 align-items-center justify-content-between">
+                    <button id="joinLobbyRoomFormGoBack"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button"> <span class="material-symbols-outlined  pt-sm-1 fs-5">
+                            chevron_left
+                        </span> Go back
+                    </button>
+                    <button id="readyToPlay"
+                        class="col-auto btn btn-outline-dark d-flex flex-nowrap justify-content-center rounded-0"
+                        type="button">Ready <span class="material-symbols-outlined ps-2 fs-5">
+                            flag
+                        </span></button>
                 </div>
             </div>
         </div>
