@@ -1,0 +1,32 @@
+[
+  {
+    "sessionID": 1,
+    "status": "prep",
+    "turn": 0,
+    "player1": {
+      "name": "mark1",
+      "lineup": [],
+      "currentMove": []
+    },
+    "player2": {
+      "name": "mark2",
+      "lineup": [],
+      "currentMove": []
+    }
+  },
+  {
+    "sessionID": 2,
+    "status": "prep",
+    "turn": 0,
+    "player1": {
+      "name": "mark1",
+      "lineup": [],
+      "currentMove": []
+    },
+    "player2": {
+      "name": "mark2",
+      "lineup": [],
+      "currentMove": []
+    }
+  }
+]

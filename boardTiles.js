@@ -5,6 +5,8 @@ import { playerTurn } from './tileDetails.js'
 
 const boardTiles = [['left', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'right'], ['bottom', '1', '2', '3', '4', '5', '6', '7', '8', 'top']] //col, row
 const rank = ['5G', '4G', '3G', '2G', '1G', 'COL', 'LTC', 'MAJ', 'CPT', '1LT', '2LT', 'SGT', 'PVT', 'SPY', 'FLG']
+const sessionID = 1 //randomize
+
 
 const createTile = (col, row) => {
     const tileElem = document.createElement('div')
@@ -25,7 +27,7 @@ const createTile = (col, row) => {
     $("#" + col + row).on('click', () => {
         const tileLoc = col + row
         const tilePieceDetails = $("#" + col + row).attr("data-occupied") 
-        playerTurn(tileLoc,tilePieceDetails)
+        playerTurn(sessionID, tileLoc,tilePieceDetails)
     })
 }
 
@@ -41,7 +43,7 @@ function insertPieceImg(rank, color) {
 
 }
 
-export const createPrepTile = (rank, team = 1) => {
+export const createPrepTile = (rank, team = 0) => {
     const tileElem = document.createElement('div')
     tileElem.id = "prep" + rank
     tileElem.dataset.info = [team, rank]
@@ -49,11 +51,11 @@ export const createPrepTile = (rank, team = 1) => {
     // tileElem.className = "grid-item"
     document.getElementById("prepBoard").appendChild(tileElem)
 
-    insertPieceImg(rank, (team == 1) ? 'w' : '')
+    insertPieceImg(rank, (team) ? 'w' : '')
 
     $("#prep" + rank).on('click', () => {
         const peice = $("#prep" + rank).attr("data-info")
-        onPrepSelectPiece(peice)
+        onPrepSelectPiece(sessionID, peice)
     })
 }
 

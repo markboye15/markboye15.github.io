@@ -52,8 +52,8 @@ const getPieceValue = (tileID) => { // is populated
 }
 
 // export function playerTurn(prep = true, currPlayer = 0, isprevTileClicked = false, prevTileClickedValue = 'A1') {
-export function playerTurn(loc, piece) {
-    console.log(loc, piece)
+export function playerTurn(sessionID, loc, piece) {
+    console.log(sessionID, loc, piece)
     // oonclick if is current player to turn then = true or false
     //      if not isprevTileClicked
     //          if is clicked tile is occupied then = [0, 0] //0 not occupied, 1 allied, 2 enemy

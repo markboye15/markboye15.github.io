@@ -48,12 +48,32 @@ export const readFormation = () => {
 
         })
     }
-    
+
     return playerBoard
 }
 
-export const onPrepSelectPiece = (piece) => {
-    console.log(piece)
+export const onPrepSelectPiece = async (sessionID, piece) => {
+
+    $.post("./getMatchData.php", {
+        sessionID: sessionID,
+        player: 'mark1',
+        piece: piece
+    }).done((data) => {
+        console.log(data)
+    })
+
+    // const matchDetails = await fetch('./_matchData.json')
+    //     .then((res) => res.json())
+    //     .then((json) => { return json })
+
+
+    // const matchDetailsFilter = matchDetails.filter(item => item.sessionID === 2)
+    // const currentMove = matchDetailsFilter[0]['player1']['currentMove']
+    // console.log(currentMove)
+    // if (currentMove === null) {
+
+    // }
+    // console.log(matchDetails)
 }
 
 
