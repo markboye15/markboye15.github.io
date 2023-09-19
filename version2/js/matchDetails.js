@@ -3,7 +3,7 @@
 export const getJSONData = async (sessionID = null, userInfo = null) => {
     let values = []
 
-    await $.post("./php/matchDetails.php", {
+    await $.get("./php/matchDetails.php", {
         sessionID: sessionID,
         userInfo: userInfo
     }).done(async (data) => {
@@ -16,7 +16,7 @@ export const getJSONData = async (sessionID = null, userInfo = null) => {
 export const updateJSONData = async (sessionID = null, userInfo = null, lobbyDetails) => {
     let values = []
 
-    await $.post("./php/updateMatchDetails.php", {
+    await $.get("./php/updateMatchDetails.php", {
         sessionID: sessionID,
         userInfo: userInfo
     }).done(async (data) => {
@@ -29,7 +29,7 @@ export const updateJSONData = async (sessionID = null, userInfo = null, lobbyDet
 export const insertJSONData = async (lobbyDetails = []) => {
     let values = []
 
-    await $.post("./php/insertMatchDetails.php", {
+    await $.get("./php/insertMatchDetails.php", {
         lobbyDetails: lobbyDetails
     }).done(async (data) => {
         values = JSON.parse(data)
